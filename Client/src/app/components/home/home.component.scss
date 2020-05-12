@@ -1,0 +1,19 @@
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.info {
+    color: gray;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.home-component {
+    padding: 20px;
+}
+
+::ng-deep .mat-form-field-label {
+    /*change color of label*/
+    color: black !important;
+}

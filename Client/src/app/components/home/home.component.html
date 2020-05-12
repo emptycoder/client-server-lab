@@ -1,0 +1,40 @@
+<div class="home-component">
+    <h1>Calculate matrix</h1>
+    <mat-form-field>
+        <mat-label>Row begin</mat-label>
+        <input matInput type="number" [(ngModel)]="data.rowBeg">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <mat-label>Row end</mat-label>
+        <input matInput type="number" [(ngModel)]="data.rowEnd">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <mat-label>Column begin</mat-label>
+        <input matInput type="number" [(ngModel)]="data.colBeg">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <mat-label>Column end</mat-label>
+        <input matInput type="number" [(ngModel)]="data.colEnd">
+    </mat-form-field>
+    <br>
+    <p class="info">Syntax of matrix id: Mi,j (i - rows, j - columns)</p>
+    <br>
+    <mat-form-field>
+        <mat-label>Matrix left</mat-label>
+        <input matInput type="text" [(ngModel)]="data.matrixLeft">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <mat-label>Matrix right</mat-label>
+        <input matInput type="text" [(ngModel)]="data.matrixRight">
+    </mat-form-field>
+    <br>
+    <p *ngIf="error" class="error">{{error.message}}</p>
+    <br>
+    <a mat-raised-button (click)="calculateMatrix()">Calculate</a>
+    <br>
+    <p>{{result}}</p>
+</div>
